@@ -689,89 +689,44 @@ h1, h2, h3 {
 
 .tools-track {
   display: flex;
-  gap: 3vw;
+  gap: 6vw;
   align-items: center;
   will-change: transform;
+  padding-left: 10vw;
 }
 
-.tool-shot {
+.tool-slide {
   flex-shrink: 0;
-  width: min(34vw, 460px);
-  background: var(--white);
-  border: 2px solid var(--ink);
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.3);
+  width: min(40vw, 560px);
+  display: grid;
+  gap: 1.6rem;
 }
 
-.tool-shot .bar {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 14px;
-  background: var(--sun);
-  border-bottom: 2px solid var(--ink);
+.tool-illustration {
+  width: 100%;
+  height: auto;
+}
+
+.tool-slide-caption h3 {
   font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-}
-
-.tool-shot .body {
-  padding: 16px;
-  display: grid;
-  gap: 10px;
-}
-
-.tool-line {
-  height: 9px;
-  border-radius: 5px;
-  background: rgba(45, 82, 100, 0.18);
-}
-
-.tool-line.w90 { width: 90%; }
-.tool-line.w70 { width: 70%; }
-.tool-line.w55 { width: 55%; }
-.tool-line.w35 { width: 35%; }
-.tool-line.sun { background: var(--sun); }
-.tool-line.md {
-  background:
-    repeating-linear-gradient(90deg, var(--sanjuan) 0 26%, #e8dcc0 26% 100%);
-}
-
-.tool-shot .cols {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-}
-
-.tool-shot .block {
-  border: 1.5px solid rgba(45, 82, 100, 0.35);
-  border-radius: 10px;
-  padding: 10px;
-  display: grid;
-  gap: 7px;
-}
-
-.tool-caption {
-  flex-shrink: 0;
-  width: min(24vw, 320px);
-  font-family: var(--font-display);
-}
-
-.tool-caption h3 {
   font-size: clamp(1.2rem, 1.8vw, 1.6rem);
   font-weight: 900;
   color: var(--sun);
   margin-bottom: 0.7rem;
 }
 
-.tool-caption p {
+.tool-slide-caption p {
   font-family: var(--font-body);
   font-size: 0.95rem;
   line-height: 1.5;
   color: rgba(250, 247, 240, 0.85);
+  max-width: 46ch;
+}
+
+@media (max-width: 900px) {
+  .tool-slide {
+    width: min(78vw, 420px);
+  }
 }
 
 /* ---------- Struck cards ---------- */
